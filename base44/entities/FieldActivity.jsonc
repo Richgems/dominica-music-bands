@@ -1,0 +1,111 @@
+{
+  "name": "FieldActivity",
+  "type": "object",
+  "properties": {
+    "activity_type": {
+      "type": "string",
+      "enum": [
+        "interview",
+        "observation",
+        "recording_session",
+        "archive_visit",
+        "community_meeting",
+        "performance_attendance",
+        "site_visit",
+        "survey",
+        "other"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time_start": {
+      "type": "string",
+      "description": "HH:MM"
+    },
+    "time_end": {
+      "type": "string",
+      "description": "HH:MM"
+    },
+    "parish": {
+      "type": "string",
+      "enum": [
+        "Saint Andrew",
+        "Saint David",
+        "Saint George",
+        "Saint John",
+        "Saint Joseph",
+        "Saint Luke",
+        "Saint Mark",
+        "Saint Patrick",
+        "Saint Paul",
+        "Saint Peter"
+      ]
+    },
+    "location_description": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "researcher": {
+      "type": "string"
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Names of people present"
+    },
+    "band_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "musician_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "string"
+    },
+    "follow_up_needed": {
+      "type": "boolean",
+      "default": false
+    },
+    "follow_up_notes": {
+      "type": "string"
+    },
+    "media_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "weather_conditions": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "activity_type",
+    "title",
+    "date"
+  ]
+}

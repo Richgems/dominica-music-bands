@@ -1,0 +1,97 @@
+{
+  "name": "AnalysisNote",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "note_type": {
+      "type": "string",
+      "enum": [
+        "theoretical",
+        "comparative",
+        "descriptive",
+        "methodological",
+        "reflexive",
+        "coding_memo",
+        "draft_argument",
+        "hypothesis",
+        "other"
+      ]
+    },
+    "body": {
+      "type": "string",
+      "description": "Full text of the analysis note"
+    },
+    "related_band_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_musician_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_question_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_section_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "author": {
+      "type": "string"
+    },
+    "date_written": {
+      "type": "string",
+      "format": "date"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "reviewed",
+        "incorporated",
+        "discarded"
+      ],
+      "default": "draft"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "speculative"
+      ],
+      "default": "medium"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "note_type"
+  ]
+}

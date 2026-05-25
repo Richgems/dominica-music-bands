@@ -1,0 +1,153 @@
+{
+  "name": "Band",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the band or musical group"
+    },
+    "also_known_as": {
+      "type": "string",
+      "description": "Alternative names or aliases"
+    },
+    "band_type": {
+      "type": "string",
+      "enum": [
+        "steelband",
+        "jing_ping",
+        "b\u00e9l\u00e9",
+        "quadrille",
+        "bouyon",
+        "cadence_lypso",
+        "gospel",
+        "string_band",
+        "drum_and_chant",
+        "other"
+      ],
+      "description": "Type / genre of ensemble"
+    },
+    "genre": {
+      "type": "string",
+      "description": "Genre label from the research database e.g. 'Bouyon / Digital Era'"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category e.g. Band, Choir, Ensemble"
+    },
+    "era": {
+      "type": "string",
+      "description": "Era label e.g. 1970s, 1980s\u20131990s"
+    },
+    "era_from": {
+      "type": "number",
+      "description": "Start year of the era"
+    },
+    "era_to": {
+      "type": "number",
+      "description": "End year of the era"
+    },
+    "parish": {
+      "type": "string",
+      "enum": [
+        "Saint Andrew",
+        "Saint David",
+        "Saint George",
+        "Saint John",
+        "Saint Joseph",
+        "Saint Luke",
+        "Saint Mark",
+        "Saint Patrick",
+        "Saint Paul",
+        "Saint Peter"
+      ],
+      "description": "Parish in the Commonwealth of Dominica where the band is based"
+    },
+    "village_community": {
+      "type": "string",
+      "description": "Specific village or community"
+    },
+    "active_years": {
+      "type": "string",
+      "description": "e.g. 1978\u2013present"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "dissolved",
+        "unknown"
+      ],
+      "default": "unknown"
+    },
+    "diaspora_location": {
+      "type": "string",
+      "description": "Location if diaspora band"
+    },
+    "description": {
+      "type": "string",
+      "description": "Free-text description / ethnographic notes"
+    },
+    "instruments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of instruments used"
+    },
+    "repertoire_notes": {
+      "type": "string",
+      "description": "Notes on songs, rhythms, or repertoire"
+    },
+    "performance_contexts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "e.g. Carnival, funerals, weddings, mas camps"
+    },
+    "leader_name": {
+      "type": "string",
+      "description": "Band leader or primary contact name"
+    },
+    "contact_info": {
+      "type": "string",
+      "description": "Phone, email or address"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "GPS latitude of base location"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "GPS longitude of base location"
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of Source records documenting this band"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Photo URL"
+    },
+    "audio_url": {
+      "type": "string",
+      "description": "Audio sample URL"
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "Field-verified entry"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Internal researcher notes"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

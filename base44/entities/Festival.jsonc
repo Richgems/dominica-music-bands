@@ -1,0 +1,38 @@
+{
+  "name": "Festival",
+  "type": "object",
+  "properties": {
+    "festival_name": {
+      "type": "string",
+      "description": "Name of the festival (e.g. World Creole Music Festival)"
+    },
+    "year": {
+      "type": "number",
+      "description": "Year of the festival"
+    },
+    "stage_number": {
+      "type": "number",
+      "description": "Stage or performance number (1, 2, 3, etc.)"
+    },
+    "lineup": {
+      "type": "string",
+      "description": "List of bands or artists performing"
+    },
+    "description": {
+      "type": "string",
+      "description": "Event description or theme"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or details"
+    },
+    "poster_url": {
+      "type": "string",
+      "description": "URL of the official festival poster image"
+    }
+  },
+  "required": [
+    "festival_name",
+    "year"
+  ]
+}

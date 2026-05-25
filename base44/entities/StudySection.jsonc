@@ -1,0 +1,100 @@
+{
+  "name": "StudySection",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Section title"
+    },
+    "section_code": {
+      "type": "string",
+      "description": "Short identifier e.g. S1, S2-A"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "overview",
+        "history",
+        "instruments",
+        "repertoire",
+        "social_context",
+        "geography",
+        "community",
+        "methodology",
+        "findings",
+        "appendix"
+      ]
+    },
+    "parent_section_id": {
+      "type": "string",
+      "description": "ID of parent section for nesting"
+    },
+    "body": {
+      "type": "string",
+      "description": "Rich text content of the section"
+    },
+    "order_index": {
+      "type": "number",
+      "description": "Display order"
+    },
+    "parish_focus": {
+      "type": "string",
+      "enum": [
+        "Saint Andrew",
+        "Saint David",
+        "Saint George",
+        "Saint John",
+        "Saint Joseph",
+        "Saint Luke",
+        "Saint Mark",
+        "Saint Patrick",
+        "Saint Paul",
+        "Saint Peter",
+        "all"
+      ]
+    },
+    "band_type_focus": {
+      "type": "string",
+      "enum": [
+        "steelband",
+        "jing_ping",
+        "b\u00e9l\u00e9",
+        "quadrille",
+        "bouyon",
+        "cadence_lypso",
+        "gospel",
+        "string_band",
+        "drum_and_chant",
+        "other",
+        "all"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs of attached files"
+    },
+    "authored_by": {
+      "type": "string"
+    },
+    "last_revised": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}

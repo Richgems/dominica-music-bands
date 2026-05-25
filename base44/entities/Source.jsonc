@@ -1,0 +1,91 @@
+{
+  "name": "Source",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the source"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "interview",
+        "field_recording",
+        "archival_document",
+        "newspaper",
+        "book",
+        "journal_article",
+        "photograph",
+        "video",
+        "government_record",
+        "oral_history",
+        "other"
+      ]
+    },
+    "author_collector": {
+      "type": "string",
+      "description": "Author, collector, or interviewer"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of source or collection"
+    },
+    "location": {
+      "type": "string",
+      "description": "Where collected or archived"
+    },
+    "parish": {
+      "type": "string",
+      "enum": [
+        "Saint Andrew",
+        "Saint David",
+        "Saint George",
+        "Saint John",
+        "Saint Joseph",
+        "Saint Luke",
+        "Saint Mark",
+        "Saint Patrick",
+        "Saint Paul",
+        "Saint Peter"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "description": "Language of the source"
+    },
+    "description": {
+      "type": "string",
+      "description": "Summary of content"
+    },
+    "url_or_path": {
+      "type": "string",
+      "description": "Link or file path"
+    },
+    "archive_reference": {
+      "type": "string",
+      "description": "Archive call number or reference code"
+    },
+    "band_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Band IDs this source documents"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keywords"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "source_type"
+  ]
+}

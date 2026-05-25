@@ -1,0 +1,18 @@
+{
+  "name": "MapSettings",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Settings key, e.g. 'parishPositions'"
+    },
+    "value": {
+      "type": "string",
+      "description": "JSON-serialised settings value"
+    }
+  },
+  "required": [
+    "key",
+    "value"
+  ]
+}

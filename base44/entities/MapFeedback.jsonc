@@ -1,0 +1,80 @@
+{
+  "name": "MapFeedback",
+  "type": "object",
+  "properties": {
+    "band_id": {
+      "type": "string",
+      "description": "Band this feedback relates to"
+    },
+    "feedback_type": {
+      "type": "string",
+      "enum": [
+        "location_correction",
+        "missing_band",
+        "duplicate_entry",
+        "incorrect_info",
+        "additional_info",
+        "general_comment"
+      ]
+    },
+    "submitter_name": {
+      "type": "string"
+    },
+    "submitter_email": {
+      "type": "string"
+    },
+    "submitter_role": {
+      "type": "string",
+      "enum": [
+        "community_member",
+        "musician",
+        "researcher",
+        "cultural_officer",
+        "historian",
+        "other"
+      ]
+    },
+    "parish": {
+      "type": "string",
+      "enum": [
+        "Saint Andrew",
+        "Saint David",
+        "Saint George",
+        "Saint John",
+        "Saint Joseph",
+        "Saint Luke",
+        "Saint Mark",
+        "Saint Patrick",
+        "Saint Paul",
+        "Saint Peter"
+      ]
+    },
+    "message": {
+      "type": "string",
+      "description": "Feedback message"
+    },
+    "suggested_latitude": {
+      "type": "number"
+    },
+    "suggested_longitude": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "reviewed",
+        "applied",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "reviewer_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "feedback_type",
+    "message"
+  ]
+}

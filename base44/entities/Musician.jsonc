@@ -1,0 +1,91 @@
+{
+  "name": "Musician",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "also_known_as": {
+      "type": "string",
+      "description": "Nickname or alias"
+    },
+    "birth_year": {
+      "type": "number"
+    },
+    "death_year": {
+      "type": "number"
+    },
+    "parish": {
+      "type": "string",
+      "enum": [
+        "Saint Andrew",
+        "Saint David",
+        "Saint George",
+        "Saint John",
+        "Saint Joseph",
+        "Saint Luke",
+        "Saint Mark",
+        "Saint Patrick",
+        "Saint Paul",
+        "Saint Peter"
+      ]
+    },
+    "village_community": {
+      "type": "string"
+    },
+    "instruments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "performer",
+          "composer",
+          "arranger",
+          "singer",
+          "band_leader",
+          "teacher",
+          "informant",
+          "other"
+        ]
+      }
+    },
+    "band_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of bands this musician is/was associated with"
+    },
+    "biography": {
+      "type": "string"
+    },
+    "ethnicity_heritage": {
+      "type": "string",
+      "description": "e.g. Kalinago, African-Creole, mixed"
+    },
+    "contact_info": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "full_name"
+  ]
+}

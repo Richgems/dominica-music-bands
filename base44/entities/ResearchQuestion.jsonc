@@ -1,0 +1,77 @@
+{
+  "name": "ResearchQuestion",
+  "type": "object",
+  "properties": {
+    "question_text": {
+      "type": "string",
+      "description": "The research question"
+    },
+    "question_code": {
+      "type": "string",
+      "description": "Short code e.g. RQ-01"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "historical",
+        "organological",
+        "social",
+        "geographic",
+        "performative",
+        "identity",
+        "transmission",
+        "policy",
+        "archival",
+        "comparative"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "in_progress",
+        "answered",
+        "deferred"
+      ],
+      "default": "open"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default": "medium"
+    },
+    "related_band_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_section_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proposed_methods": {
+      "type": "string",
+      "description": "How this question could be answered"
+    },
+    "preliminary_answer": {
+      "type": "string"
+    },
+    "sources_needed": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "question_text",
+    "category"
+  ]
+}

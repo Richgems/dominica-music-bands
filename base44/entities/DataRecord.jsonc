@@ -1,0 +1,97 @@
+{
+  "name": "DataRecord",
+  "type": "object",
+  "properties": {
+    "record_type": {
+      "type": "string",
+      "enum": [
+        "band_profile",
+        "event_observation",
+        "interview_transcript",
+        "instrument_description",
+        "song_transcription",
+        "census_data",
+        "media_log",
+        "other"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "band_id": {
+      "type": "string"
+    },
+    "musician_id": {
+      "type": "string"
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "parish": {
+      "type": "string",
+      "enum": [
+        "Saint Andrew",
+        "Saint David",
+        "Saint George",
+        "Saint John",
+        "Saint Joseph",
+        "Saint Luke",
+        "Saint Mark",
+        "Saint Patrick",
+        "Saint Paul",
+        "Saint Peter"
+      ]
+    },
+    "collection_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "collector": {
+      "type": "string",
+      "description": "Researcher or field worker name"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full text / transcription / data body"
+    },
+    "media_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quality": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "uncertain"
+      ],
+      "default": "medium"
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "record_type",
+    "title"
+  ]
+}

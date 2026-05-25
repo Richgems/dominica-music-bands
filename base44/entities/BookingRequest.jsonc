@@ -1,0 +1,74 @@
+{
+  "name": "BookingRequest",
+  "type": "object",
+  "properties": {
+    "band_id": {
+      "type": "string",
+      "description": "ID of the requested band"
+    },
+    "band_name": {
+      "type": "string",
+      "description": "Name of the requested band"
+    },
+    "client_name": {
+      "type": "string",
+      "description": "Client full name"
+    },
+    "client_email": {
+      "type": "string",
+      "description": "Client email"
+    },
+    "client_phone": {
+      "type": "string",
+      "description": "Client phone number"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the event"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "wedding",
+        "birthday",
+        "corporate",
+        "festival",
+        "private_party",
+        "concert",
+        "other"
+      ],
+      "description": "Type of event"
+    },
+    "event_location": {
+      "type": "string",
+      "description": "Event location"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional details"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "declined",
+        "completed"
+      ],
+      "default": "pending",
+      "description": "Booking status"
+    },
+    "budget": {
+      "type": "string",
+      "description": "Client budget range"
+    }
+  },
+  "required": [
+    "band_id",
+    "client_name",
+    "client_email",
+    "event_date",
+    "event_type"
+  ]
+}
